@@ -1,0 +1,15 @@
+val a = Array(1,2,3)
+val b = List(4,5,6)
+val c = Array.fill(10)(1)
+val d = List.tabulate(10)(i=>i+1)
+
+a.exists(_>3)
+b.exists(_>3)
+c.filter(_<1)
+a.reduceLeft((x,y)=>x+y)
+a.reduceLeft(_+_)
+a.foldLeft(1)(_+_)
+a.foldLeft("Array=")(_+_)
+
+a.find(_>3).map(_+1)
+a.find(_>=3).map(_+1)
